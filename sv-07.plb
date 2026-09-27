@@ -1,0 +1,172 @@
+
+whenever sqlerror exit rollback
+
+create or replace procedure valida_diagnostico_bd wrapped 
+a000000
+369
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+7
+78a 402
+4C25t9RtqBJFLvEZISGFHlFCfC0wg/BcTEgTZy+5x2MZOBlLbImD3E/TldNALjTx7VeZU/q2
+oxMuRkavTMon1Q/oF33zwC3LOU4L2qH3AS2YmkfPTs1HS49hoVbQtjDzzATnJOeVx24ak1Pc
+5FxQus5Bhohug0shU60qzk0oQMHcJkToxq040eHnW/zPOnRL0rsAFSxrP8tg7SDWrw6qTOBv
+aGF66wCvX6uF8bgHg0edgckD35G0ZxbHcdZY2xfUbqDKnCrhcr4eYs+cb6nH57aEcBsHB0JO
+ve4w36i/iQ22RUX7Yo33cRdLXKHIZIKkhxryahQzT5sWJahf61nb9inG4O8y3QKXmztPApUn
+8Et8pju4vUsF3q7FMalhBT2bBhnp3wRhQ7HIWjhnHOMpvjZ9z9xWJ48FN5QB4lV9Jiwp6Cxt
+GpzumBV9DXRcU2Pex8A3Sn3NC2SgFjSlh7ZaA41UgNNW9/SNWmPoKIE4qs+CVu6m36rr1A6w
+yZR/eczyE2fKqNN8LQ6/GvrpYz8P2rTD/eoC7C6g/Lg+UaLuPTQ0+a8G3HDVianUBrikDUwQ
+JFAMbIX11ZRlAoz1qDfrkZISIHPE6YqH/85g/Uw8oVZtCSNz/QtrfmH3R9vanqDZ4vdr7bre
+syYC/jatwnnD3hIwhOx64oqZM/0Ime1JLyLBZuH7jNm1aWMFxnf7yZi09LIXp34r8m8YwwBv
+GF5ce82xhSUx4vWtsbZMyuhbUhxsLLe7X3WCaCkZeWEXlonTCNBxQfEgKG1AEhLEURneaIJL
+A9semjF0lxkssQBU8OV/dP4LDPlomtjxzjLOYqxRfF5HY1MzeUt7LmMhIPEWsZRzZTzMGugE
+2gICNpKkAxtsm3DxAm0Ck34QT9M5YdqVCUTkF1yHsCbhaKuCwcr91Hi3V9fviioI7hRIX7Tq
+jA1m8jivCztk1Q/lfaN25/e0x7+5F0ZOQvSWhbbJ7r8RYGJqxsw/xn7GY+jNrtgerrWmH1eo
+0g==
+
+/
+show errors
+
+create or replace procedure valida_roles wrapped 
+a000000
+369
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+7
+546 2ee
+0YFANMQqOmxmOFb0o23ObYBbziYwg2PDLvYFZy/Nrci1fMQNo7bxBl5fy8IhYR9uTDLS88DT
+J2Ks3Y2sjs+bT/oofSbEh3PGRQpyOwuEDDVwzUcFeIKuIIq39bNt5zhPuZt57MND0QpJP9NE
+94Rx5orImJ99AzIQRI+i7uwSj2CiFuYCNUW8BjfclfTV7/Os4xxvWsekCUtn8fmhzwZ/oGep
+pnh9QA4Lz9bVfowM8SiPYm4UMJ6rzwc/cYz8SOlK5/OvOYua/9MohkZdOVjFoN2UH6sFCN8Q
+WSKj3ekW+Lz1P00OIN+KYsQig7sRE2txoTC27whD6xp5wf+5BLDNWMy+HU7RwzHHh50rKWGR
+GxvVvI2VTzjM5pCB9IauhZ9pkEt/sg1Fn4PBT9R2jSEy0vGCgngsVDDtd59d+FqMtti1sxQ7
+TsHm8Ms+S2o4jyEIAJFpW5oK++m9k3Mjz5iiEeU92psZQAXU0AwBYAnA8EpoWinEPf9ZRGd4
+1oCBDb3HvZAvPR/n4dFEEzM3UJMW+wcLRwhSekTObObuZgPoAH9OCs9Pu4nM8lW8zMG4cJzJ
+6yZzCICDMUaQAQUsmnernP5JoBctQrNrxhg5tT7p2XDX2u1gUvixrrixFMxCWpkSMZYDXp3j
+hmS7k1wV39aca50jEQr52mx7CZAqk9SVClsgRCfN/JzY8p3oREdZzndU+qDFmUy0VNEAnRx8
+n99oHvmhiyw/HRr6SAI=
+
+/
+show errors
+
+create or replace procedure valida_usuarios_admin wrapped 
+a000000
+369
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+7
+614 243
+iHbhalkzJxY3qEya+XhOuAI5rzEwg+3xctwVZy/UABPOy8d83vbj+11wFHZhzWb9KWExnwxX
+Ko3fgzYmKeGHMNUsrx/HxGI2tWwOj3nBEzE6yaraHMdifsdAOIiuAxRKb+DzH5PRUVdCl8lF
+H8yxfwF7okeryjzfpghwZ35LVwt1OfP+fx0GT5DhRvPCpOZ4DSMKEHn1Cl9DwKumQ0r0WIlZ
+zwxNl84w4zuml6A/OKZrN5jR6joix6Tncu3MT3RS3iuj8DlUy2PmGHZo6+QtZD6kzP1dMd/M
+rpkExgVRHjgrCj1pp9mlAeOIKdAybKagIw0yjBgqh+5psaiQNXFZHAMBy6Geci0vlkL351D2
+hD2+LX8J92s9EPziCo056ZLI9EL3mYW7wSlWDMAt4iURy2aNIrfP35YZh6hBFeD2pj5q0IdD
+DJTNzU9TKfv+kZWLLLKt5gPrfuo2yx2qeTMCcxmJDT3lSOhazRX4qUYk7Krg7R9VCu8lc9nT
+u0r+BP3kYpqaOyDB46kukVVSu87j9k+1qTQBDa9fQ/aEIRTf8XBX4NuBChJVt7/t0mRL
+
+/
+show errors
+
+create or replace procedure valida_bitacora wrapped 
+a000000
+369
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+7
+84c 2e6
+40xKjSpi2n7d2EODaXj9qoW18xUwgz1c10oTfC+5vgmaOEhn6epnEVwBjdb7v7GDNk2vzMfm
+IWuYWr0a5KCcNFlPa9BLlisD30aKY+VRXL+WEXpPOnqawbNXGjdtAGB/5FrEOhsuvIsuRdEK
+w7K2JFRXdlRm/IfvJ96pVM8ueriIY7TQtm84nhQjTqtwWFP7TgumpTEVr9IJFCSCWep6MV5N
+YTgE7DYLXUcIBCE70KtZF1BPz1cWQJAaE0yHcSFArYnoWuFvf6KhuPLdf1sP86pxpsHDRSpn
+kHkDMh0ewmKrgTs5QrOJfFWaWOH5K43aactbk3aWZ12qGQFcOc0/T1wnusTejZyrR0UsYi2o
+Yt/T//y7eWEMbHpCdOpDK+afSYzWrqClCZME4Hu0ZABTcFTmIfmsTG8Lym1EM+cGzGT3zlJ8
+cR1t46oykT3Ga9Np0M5MVhD1HRiWp3XxrtVcifb/FPfRPBi3eP6dex7upMOTUpjttUypve0f
+Xu5Yeqwf2B2xrQLuFC73WfGcIO56xEJVw2Oj9siUHsIR5fVePHPcAvJ2GMBGJHHjn/W5T3TM
+UVwafcZkwQ6CAEtgHLjmJrppJJB9ncTZXToN2V1DDQyFbq1SQmR0+50xqQUQ6JQzhZ41EH5u
+Svmqn0pz5HvBc212IcvAIFRXHHhlx0GILNxJSo93NSLa0OjIZ0/djooS5DGQtihsy/TzH9bR
+D3P7Fpau9w==
+
+/
+show errors
+
+create or replace procedure valida_ejercicios wrapped 
+a000000
+369
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+7
+1bb 134
+uX1k0f06TDI5d0B3CKPh7IJZH8Uwg/DILSdqZ3RAgh+by4PgIGEpjus1vLZhGBAX9SJkgFqC
+UzbhYvWXarHRoX01r6SVtRAk8SMtGKAfrGRqQiPaRuv4KYZXpLDZFyVbC5gnSmCOPQ6OPg4s
+qzwONOdYqDCA4YphrqaGejCOYTHHp2qEoZtWDDi14f7CHjLEL5hl8azofw/3bxvk3m+1ZW2V
+2E3JTl6pYvZ07C3fPLLYfk3100z3p51nLWK+FIcwshZmj29TqUULTs5I28N6DsKszPJgmscj
+bMzYi6fATrIXWzI+
+
+/
+show errors
