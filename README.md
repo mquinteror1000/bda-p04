@@ -2,6 +2,12 @@
 
 ### Privilegios de administración, roles y mecanismos de autenticación
 
+## Iniciar y levantar
+
+Iniciar la instancia con  y levantar con **launch**
+
+[Salida: Levantar la instancia](ejecucion/levanta-con-launch.md)
+
 ## s-01-sys-pass-admin.sh
 
 Este script 
@@ -26,4 +32,4 @@ ejecutarlo con el usuario aministrador
 [martin@h1-bda-mqr 04]$ sh s-01-sys-pass-admin.sh
 ```
 
-[Salida](ejecucion/s-01-sys-pass-admin.md)
+[Salida: ejecutar s-01-sys-pass-admin.md](ejecucion/s-01-sys-pass-admin.md)
