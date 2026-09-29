@@ -1,2 +1,11 @@
 # Practica 4 BDA
-Práctica 04 de BDA
+
+### Privilegios de administración, roles y mecanismos de autenticación
+
+Ho que maravilla, estamos trabajanco con el editor de markdown de vscode
+
+```shellsession
+sdsds
+```
+
+sdsd
