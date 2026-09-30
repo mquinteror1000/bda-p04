@@ -64,3 +64,34 @@ idle> @s-02-diagnostico-bd.sql
 ```
 
 [Ejecucion s-02-diagnostico-bd.sql ](ejecucion/s-02-diagnostico-bd.sql.md)
+
+## s-03-roles.sql
+
+Crea un rol **p04_dev_role** le otorga privilegios, los modifica y asigna el rol a sol usuarios **MARTIN_DEV_01** y **MARTIN_DEV_02** y comprueba el resultado con una consulta
+
+editar
+
+```sql
+-- EDITAR 
+DEFINE pdb = mqrbda_s1
+DEFINE sys_password = system1_p4
+DEFINE usuario1 = MARTIN_DEV_01
+DEFINE usuario2 = MARTIN_DEV_02
+DEFINE password1 = MARTIN
+DEFINE password2 = MARTI
+```
+
+ejecutar
+
+```shellsession
+[martin@h1-bda-mqr 04]$ sqlplus /nolog
+
+SQL*Plus: Release 23.0.0.0.0 - Production on Tue Sep 29 21:05:43 2026
+Version 23.8.0.25.04
+
+Copyright (c) 1982, 2025, Oracle.  All rights reserved.
+
+idle> @s-03-roles.sql
+```
+
+[salida: s-03-roles.sql](ejecucion/s-03-roles.sql.md)
