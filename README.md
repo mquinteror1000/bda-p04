@@ -33,3 +33,34 @@ ejecutarlo con el usuario aministrador
 ```
 
 [Salida: ejecutar s-01-sys-pass-admin.md](ejecucion/s-01-sys-pass-admin.md)
+
+## s-02-diagnostico-bd.sql
+
+Crea una tabla **NOMBRE_0401.t01_diagnostico** con la información 
+
+| campo       | product                   | version_full              | instance_name | startup_time | con_id    |
+| ----------- | ------------------------- | ------------------------- | ------------- | ------------ | --------- |
+| De la vista | product_component_version | product_component_version | v$instance    | v$nstance    | v$version |
+
+Editar
+
+```bash
+DEFINE pdb = 'mqrbda_s1'
+DEFINE sys_password = 'system1_p4'
+DEFINE usuario = 'MARTIN_0401'
+```
+
+Ejecutar
+
+```shellsession
+[martin@h1-bda-mqr 04]$ sqlplus /nolog
+
+SQL*Plus: Release 23.0.0.0.0 - Production on Tue Sep 29 19:32:27 2026
+Version 23.8.0.25.04
+
+Copyright (c) 1982, 2025, Oracle.  All rights reserved.
+
+idle> @s-02-diagnostico-bd.sql
+```
+
+[Ejecucion s-02-diagnostico-bd.sql ](ejecucion/s-02-diagnostico-bd.sql.md)
