@@ -44,7 +44,7 @@ CREATE USER &usuario_admin. IDENTIFIED BY "&password_admin." QUOTA UNLIMITED ON 
 GRANT CREATE SESSION, CREATE TABLE TO &usuario_admin.; 
 
 -- F crear tabla para guardar los registros
-DROP TABLE IF EXISTS &usuario_admin..t01_bitacora CASCADE;
+DROP TABLE IF EXISTS &usuario_admin..t01_bitacora CASCADE CONSTRAINTS;
 CREATE TABLE &usuario_admin..t01_bitacora (
     id NUMBER NOT NULL,
     usuario VARCHAR2(30) NOT NULL,
@@ -119,7 +119,7 @@ VALUES(
 );
 COMMIT;
 
-CONNECT &usuario3./&password3.@&pdb. AS sysbackup
+CONNECT &usuario3./&password3.@&pdb. -- AS sysbackup -- al final no se pudo
 INSERT INTO &usuario_admin..t01_bitacora ( id, usuario, esquema, rol, fecha_registro )
 VALUES(
     6,
