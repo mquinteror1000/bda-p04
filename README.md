@@ -78,7 +78,7 @@ DEFINE sys_password = system1_p4
 DEFINE usuario1 = MARTIN_DEV_01
 DEFINE usuario2 = MARTIN_DEV_02
 DEFINE password1 = MARTIN
-DEFINE password2 = MARTI
+DEFINE password2 = MARTIN
 ```
 
 ejecutar
@@ -95,3 +95,7 @@ idle> @s-03-roles.sql
 ```
 
 [salida: s-03-roles.sql](ejecucion/s-03-roles.sql.md)
+
+## s-04-
+
+sds

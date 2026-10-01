@@ -5,10 +5,10 @@
 -- EDITAR 
 DEFINE pdb = mqrbda_s1
 DEFINE sys_password = system1_p4
-DEFINE usuario1 = MARTIN_DEV_01
-DEFINE usuario2 = MARTIN_DEV_02
-DEFINE password1 = MARTIN
-DEFINE password2 = MARTIN
+DEFINE usuario1 = martin_dev_01
+DEFINE usuario2 = martin_dev_02
+DEFINE password1 = martin
+DEFINE password2 = martin
 
 WHENEVER SQLERROR EXIT SQL.SQLCODE
 CONNECT sys/&sys_password@&pdb AS SYSDBA
