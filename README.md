@@ -96,6 +96,43 @@ idle> @s-03-roles.sql
 
 [salida: s-03-roles.sql](ejecucion/s-03-roles.sql.md)
 
-## s-04-
+## s-04-privs-admin.sql
 
-sds
+Este script crea un usuario dueño de la tabla bitacora y tres usuarios mas que escribiran registros en estas usando firerentes privilegios de aministracion
+
+Editar
+
+```sql
+-- EDITAR 
+DEFINE pdb = mqrbda_s1
+DEFINE sys_password = system1_p4
+DEFINE usuario1 = martin0402
+DEFINE usuario2 = martin0403
+DEFINE usuario3 = martin0404
+DEFINE usuario_admin = martin04_admin
+DEFINE password1 = martin
+DEFINE password2 = martin
+DEFINE password3 = martin
+DEFINE password_admin = martin
+```
+
+ejecutar
+
+```shellsession
+[martin@h1-bda-mqr 04]$ sqlplus /nolog
+
+SQL*Plus: Release 23.0.0.0.0 - Production on Thu Oct 1 11:47:00 2026
+Version 23.8.0.25.04
+
+Copyright (c) 1982, 2025, Oracle.  All rights reserved.
+
+idle> @s-04-privs-admin.sql
+```
+
+
+
+[salida: s-04-privs-admin.sql](ejecucion/s-04-privs-admin.sql.md)
+
+## s-05-archivo-passwords-oracle.sh
+
+Este scrip simula la perdida del archvo de passwords y la posterior recuperacion del mismo
