@@ -1,10 +1,20 @@
 # Levantar listener e instancia
 
-Arrancar el contenedor y luego ejecutar launch
+Arrancar el contenedor
 
 ```shellsession
 martin@pc-bda-mqr:/unam/bda/practicas/04$ dockerBda1
 c1-bda-mqr
+bash-5.1#
+```
+
+
+
+ y luego ejecutar launch
+
+
+
+```shellsession
 bash-5.1# launch 
 Verificando el listener...
 Iniciando el listener...

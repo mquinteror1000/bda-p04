@@ -136,3 +136,19 @@ idle> @s-04-privs-admin.sql
 ## s-05-archivo-passwords-oracle.sh
 
 Este scrip simula la perdida del archvo de passwords y la posterior recuperacion del mismo
+
+Como oracle no tiene permisos para escribir en esta carpeta, antes de ejecutar el scrip damos permisos de escritura a otros usuarios en esta carpeta
+
+```shellsession
+martin@pc-bda-mqr:/unam/bda/practicas/04$ chmod o+w .
+martin@pc-bda-mqr:/unam/bda/practicas/04$ 
+```
+
+ahora si ejecutamos el script siendo oracle
+
+```shellsession
+[oracle@h1-bda-mqr 04]$ sh s-05-archivo-passwords-oracle.sh 
+[container] ya existe [ /unam/bda/practicas/04/orapwfree.backup] , se omite su copia
+[container] el archivo de passwords se ha eliminado, press ENTER para iniciar su recuperacion: 
+[container] se ha generado correctamente el nuevo archivo de passwords: Vuelve a proporcionar privilegios a los demas usuarios desde sqlplus
+```
