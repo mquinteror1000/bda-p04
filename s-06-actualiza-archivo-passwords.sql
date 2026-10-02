@@ -1,5 +1,3 @@
--- @Autor Quintero Rubio Martin
--- @Fecha 26/09/2026
 -- Parte de un archivo de passwords recien creado con password de sys =Hola1234
 -- lo devuelve al valor system1 y restara los priviledios de los 3 usuarios creados con el script s-04-privs-admin.sql
 --SET VERIFY OFF si no se quieren ver las actualizaciones de cadenas

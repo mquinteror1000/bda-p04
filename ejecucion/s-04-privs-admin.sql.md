@@ -3,14 +3,13 @@
 Ejecución
 
 ```shellsession
-[martin@h1-bda-mqr 04]$ sqlplus /nolog
+[martin@h1-bda-mqr 04]$ sqlplus /nolog @s-04-privs-admin.sql 
 
-SQL*Plus: Release 23.0.0.0.0 - Production on Thu Oct 1 11:47:00 2026
+SQL*Plus: Release 23.0.0.0.0 - Production on Fri Oct 2 12:35:02 2026
 Version 23.8.0.25.04
 
 Copyright (c) 1982, 2025, Oracle.  All rights reserved.
 
-idle> @s-04-privs-admin.sql
 Connected.
 old   1: DROP USER IF EXISTS &usuario1. CASCADE
 new   1: DROP USER IF EXISTS martin0402 CASCADE
@@ -138,11 +137,7 @@ new   1: INSERT INTO martin04_admin.t01_bitacora ( id, usuario, esquema, rol, fe
 
 Commit complete.
 
-SP2-0306: Invalid option.
-Help: https://docs.oracle.com/error-help/db/sp2-0306/
-Usage: CONN[ECT] [{logon|/|proxy} [AS {SYSDBA|SYSOPER|SYSASM|SYSBACKUP|SYSDG|SYSKM|SYSRAC}] [edition=value]]
-where <logon> ::= <username>[/<password>][@<connect_identifier>]
-      <proxy> ::= <proxyuser>[<username>][/<password>][@<connect_identifier>]
+Connected.
 old   1: INSERT INTO &usuario_admin..t01_bitacora ( id, usuario, esquema, rol, fecha_registro )
 new   1: INSERT INTO martin04_admin.t01_bitacora ( id, usuario, esquema, rol, fecha_registro )
 
@@ -156,68 +151,48 @@ Version 23.8.0.25.04
 
 ```
 
-Opcional, verificar que exista la tabla
+
+
+
+
+**Opcional**, verificar que exista la tabla
+
+Entrar a sqlplus con el usuario admin **nombre**04_admin  y password **nombre**
 
 ```shellsession
 [martin@h1-bda-mqr ~]$ sqlplus martin04_admin/martin@mqrbda_s1
+```
 
-SQL*Plus: Release 23.0.0.0.0 - Production on Thu Oct 1 11:49:54 2026
-Version 23.8.0.25.04
+Dentro de sqlplus ejecutar
 
-Copyright (c) 1982, 2025, Oracle.  All rights reserved.
+```sql
+column usuario format a10
+column esquema format a10
+column rol format a10
+select * from t01_bitacora order by id asc;
+```
 
-Last Successful login time: Thu Oct 01 2026 11:47:13 -06:00
+ejemplo
 
-Connected to:
-Oracle Database 23ai Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
-Version 23.8.0.25.04
+```shellsession
+martin04_admin@mqrbda_s1> column usuario format a10
+martin04_admin@mqrbda_s1> column esquema format a10
+martin04_admin@mqrbda_s1> column rol format a10
+martin04_admin@mqrbda_s1> select * from t01_bitacora order by id asc;
 
-
-
-
-
-
-martin04_admin@mqrbda_s1> select * from t1_bitacora;
-select * from t1_bitacora
-              *
-ERROR at line 1:
-ORA-00942: table or view "MARTIN04_ADMIN"."T1_BITACORA" does not exist
-Help: https://docs.oracle.com/error-help/db/ora-00942/
-
-
-martin04_admin@mqrbda_s1> select * from t01_bitacora;
-
-	ID USUARIO			  ESQUEMA
----------- ------------------------------ ------------------------------
-ROL		     FECHA_REGISTRO
--------------------- ------------------
-	 1 MARTIN0402			  MARTIN0402
-ordinario	     01-OCT-26
-
-	 3 MARTIN0403			  MARTIN0403
-ordinario	     01-OCT-26
-
-	 4 MARTIN0403			  MARTIN0403
-sysoper 	     01-OCT-26
-
-
-	ID USUARIO			  ESQUEMA
----------- ------------------------------ ------------------------------
-ROL		     FECHA_REGISTRO
--------------------- ------------------
-	 5 MARTIN0404			  MARTIN0404
-ordinario	     01-OCT-26
-
-	 6 MARTIN0404			  MARTIN0404
-sysbackup	     01-OCT-26
-
-	 2 SYS				  SYS
-sysdba		     01-OCT-26
-
+	ID USUARIO    ESQUEMA	 ROL	    FECHA_REGISTRO
+---------- ---------- ---------- ---------- ------------------
+	 1 MARTIN0402 MARTIN0402 ordinario  02-OCT-26
+	 2 SYS	      SYS	 sysdba     02-OCT-26
+	 3 MARTIN0403 MARTIN0403 ordinario  02-OCT-26
+	 4 PUBLIC     PUBLIC	 sysoper    02-OCT-26
+	 5 MARTIN0404 MARTIN0404 ordinario  02-OCT-26
+	 6 SYSBACKUP  SYS	 sysbackup  02-OCT-26
 
 6 rows selected.
 
 martin04_admin@mqrbda_s1> 
 
-
 ```
+
+salir  de SQLplus

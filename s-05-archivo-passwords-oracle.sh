@@ -1,7 +1,8 @@
 #! /bin/sh
-# @Author Martin Quintero Rubio
-# Fecha 02-octubre-2026
-# simular la perdida del archivo de passwords
+# Simula la perdida del archivo de passwords
+# Lo recupera
+# Vuelve a agregar privilegios administrativos a varios usuarios para que sean agregados arl archivo de passwords
+## No es nesesario editar
 . /etc/profile.d/99-custom-env.sh
 PW_FILE="${ORACLE_HOME}/dbs/orapwfree"
 PRACTICA_DIR="/unam/bda/practicas/04"

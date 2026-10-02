@@ -56,8 +56,10 @@ CREATE TABLE &usuario_admin..t01_bitacora (
 -- cuandos entran sin usar privilegio: SYS
 CONNECT &usuario_admin./&password_admin.@&pdb.
 GRANT SELECT, INSERT, UPDATE ON t01_bitacora TO &usuario1., &usuario2., &usuario3.;
--- cuando entran con priv administrativo
-GRANT SELECT, INSERT, UPDATE ON t01_bitacora TO sysbackup; -- sys no ocupa
+-- cuando entran con priv administrativoi
+-- sys no ocupa
+--GRANT SELECT, INSERT, UPDATE ON t01_bitacora TO public; -- no se puede
+--GRANT SELECT, INSERT, UPDATE ON t01_bitacora TO public; --  no se puede
 
 -- H Realizar 6 inserciones en la tabla
 -- usuario1
@@ -94,13 +96,13 @@ VALUES(
     sysdate
 );
 COMMIT;
--- esta insercion es mentira porque sysoper no puede escribir en tablas
-CONNECT &usuario2./&password2.@&pdb.
+-- se simula la conecion de sysoper 
+CONNECT &usuario2./&password2.@&pdb. 
 INSERT INTO &usuario_admin..t01_bitacora ( id, usuario, esquema, rol, fecha_registro )
 VALUES(
     4,
-    sys_context('USERENV', 'CURRENT_USER'),
-    sys_context('USERENV', 'CURRENT_SCHEMA'),
+    'PUBLIC', --sys_context('USERENV', 'CURRENT_USER'),
+    'PUBLIC', --sys_context('USERENV', 'CURRENT_SCHEMA'),
     'sysoper',
     sysdate
 );
@@ -118,12 +120,13 @@ VALUES(
 );
 COMMIT;
 
-CONNECT &usuario3./&password3.@&pdb. -- AS sysbackup -- al final no se pudo
+-- se simula la conexion de sysbackup
+CONNECT &usuario3./&password3.@&pdb.
 INSERT INTO &usuario_admin..t01_bitacora ( id, usuario, esquema, rol, fecha_registro )
 VALUES(
     6,
-    sys_context('USERENV', 'CURRENT_USER'),
-    sys_context('USERENV', 'CURRENT_SCHEMA'),
+    'SYSBACKUP', --sys_context('USERENV', 'CURRENT_USER'),
+    'SYS', --sys_context('USERENV', 'CURRENT_SCHEMA'),
     'sysbackup',
     sysdate
 );

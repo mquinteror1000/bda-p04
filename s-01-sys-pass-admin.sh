@@ -1,21 +1,16 @@
 #!/bin/sh
-# @Autor Quintero Rubio Martin
-# @Fecha 26/09/2026
-# @Descripcion Recuperacion del password de sys mediante autenticacion por sistema
-# operativo a traves de sudo, sin conocer los passwords de sys ni de
-# oracle. Ejecutado por el usuario administrador.
-usuarioOs=$(whoami)
+# Autentica como oracle por S.O y modifica el password de sys a system1_p04
+# Verifica que el cambio fue aplicado autenticando por archivo de passwords
+OS_USER=$(whoami)
 #EDITAR
 INICIALES=mqr
-## abortar si oracle o root
-if [ "${usuarioOs}" = "oracle" ] || [ "${usuarioOs}" = "root" ]; then
-	echo "ERROR: el script debe ser ejecutado por el usuario administrador (no oracle, no root)"
+
+if [ "${OS_USER}" = "oracle" ] || [ "${OS_USER}" = "root" ]; then
+	echo "[container] Ejecutar como usaurio administrador, no orace o root" 
 exit 1
 fi
 
 ## A) Actualizar el password de sys autenticando por SO y desde admin_user@HOST
-echo "[sistema operativo]: Intentado actualizar password de sys autenticando via s.o"
-
 sudo -u oracle -i sqlplus -s /nolog <<EOF
 whenever sqlerror exit sql.sqlcode
 connect / as sysdba
@@ -31,14 +26,11 @@ if [ $? -ne 0 ]; then
 fi
 
 ## probar conexion con el nuevo password mediante archivo de passwords
-echo "[sistema operativo]: Intentando utenticar con sys usando archivo de passwords"
-
 sqlplus -s /nolog <<EOF
 whenever sqlerror exit sql.sqlcode
 connect sys/system1_p4 as sysdba
 select user from dual;
 prompt [sqlplus]: conexion de sys por archivo de passwords exitosa;
-prompt [sqlplus]: mira si puelo leer tus iniciales:  ${INICIALES}
 exit
 EOF
 
@@ -49,8 +41,6 @@ if [ $? -ne 0 ]; then
 fi
 
 ## probar conexion a INICIALESbda_s1
-echo "[sistema operativo]: Intentando utencat con sys en ${INICIALES}bda_s1"
-
 sqlplus -s /nolog <<EOF
 whenever sqlerror exit sql.sqlcode
 connect sys/system1_p4@${INICIALES}bda_s1 as sysdba

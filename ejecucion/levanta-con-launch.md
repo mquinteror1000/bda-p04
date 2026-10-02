@@ -8,11 +8,7 @@ c1-bda-mqr
 bash-5.1#
 ```
 
-
-
  y luego ejecutar launch
-
-
 
 ```shellsession
 bash-5.1# launch 

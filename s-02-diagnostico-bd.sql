@@ -1,6 +1,4 @@
--- @Autor Quintero Rubio Martin
--- @Fecha 26/09/2026
--- obtiene informacion de la CDB consultando vistas del diccionario y la guarda en una tabla
+-- obtiene informacion de la CDB consultando vistas del diccionario y la guarda en la tabla diagnostico
 -- EDITAR
 DEFINE pdb = 'mqrbda_s1'
 DEFINE sys_password = 'system1_p4'
@@ -10,7 +8,7 @@ DEFINE password = martin
 WHENEVER SQLERROR EXIT SQL.SQLCODE
 CONNECT sys/"&sys_password."@&pdb. AS SYSDBA
 
--- 1 y 2. Borramos el usuario en cascada si es que existe (Natividad 23ai)
+-- 1 y 2. borrar usuario si existe 
 DROP USER IF EXISTS &usuario. CASCADE;
 
 -- 3. Lo creamos desde cero y asignamos permisos
@@ -18,8 +16,7 @@ CREATE USER &usuario. IDENTIFIED BY "&password.";
 GRANT CONNECT, RESOURCE TO &usuario.;
 ALTER USER &usuario. QUOTA UNLIMITED ON USERS;
 
--- 4. Creamos la tabla (al borrar el usuario en cascada previamente, garantizamos que no existe)
--- sale con_id = 0 
+-- 4. Creamos la tabla diagnostico
 CREATE TABLE &usuario..t01_diagnostico AS 
 SELECT
     pcv.product,

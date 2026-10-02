@@ -1,19 +1,16 @@
--- @Autor Quintero Rubio Martin
--- @Fecha 26/09/2026
--- obtiene informacion de la CDB consultando vistas del diccionario y la guarda en una tabla
--- nombres de usuario en MAYUSCULAS
+-- Usa el concepto de rol para asignar privilegios a varios usuarios
 -- EDITAR 
 DEFINE pdb = mqrbda_s1
 DEFINE sys_password = system1_p4
-DEFINE usuario1 = martin_dev_01
-DEFINE usuario2 = martin_dev_02
+DEFINE usuario1 = martin04_dev_01
+DEFINE usuario2 = martin04_dev_02
 DEFINE password1 = martin
 DEFINE password2 = martin
 
 WHENEVER SQLERROR EXIT SQL.SQLCODE
 CONNECT sys/&sys_password@&pdb AS SYSDBA
 
--- Eliminar usuarios si existieran (Sintaxis válida en Oracle 23ai)
+-- Eliminar usuarios si existieran 
 DROP USER IF EXISTS &usuario1. CASCADE;
 DROP USER IF EXISTS &usuario2. CASCADE;
 

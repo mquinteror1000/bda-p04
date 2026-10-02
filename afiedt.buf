@@ -1,0 +1,4 @@
+SELECT username, created, account_status 
+FROM dba_users 
+ORDER BY username
+/
