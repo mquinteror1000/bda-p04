@@ -10,12 +10,12 @@
 --
 -- Nombre del alumno empleado como prefijo para crear usuarios en la BD
 --
-define p_nombre='jorge'
+define p_nombre='martin'
 
 ---
 ---Nombre de la PDB
 ---
-define p_pdb='jrcbda_s1'
+define p_pdb='mqrbda_s1'
 
 --
 -- Password del usuario system. Empleado para crear objetos del validador.

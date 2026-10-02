@@ -1,7 +1,6 @@
 -- @Autor Quintero Rubio Martin
 -- @Fecha 26/09/2026
 -- obtiene informacion de la CDB consultando vistas del diccionario y la guarda en una tabla
--- nombres de usuario en MAYUSCULAS
 -- EDITAR 
 DEFINE pdb = mqrbda_s1
 DEFINE sys_password = system1_p4
