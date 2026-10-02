@@ -148,12 +148,7 @@ Commit complete.
 
 Disconnected from Oracle Database 23ai Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
 Version 23.8.0.25.04
-
 ```
-
-
-
-
 
 **Opcional**, verificar que exista la tabla
 
@@ -180,19 +175,18 @@ martin04_admin@mqrbda_s1> column esquema format a10
 martin04_admin@mqrbda_s1> column rol format a10
 martin04_admin@mqrbda_s1> select * from t01_bitacora order by id asc;
 
-	ID USUARIO    ESQUEMA	 ROL	    FECHA_REGISTRO
+    ID USUARIO    ESQUEMA     ROL        FECHA_REGISTRO
 ---------- ---------- ---------- ---------- ------------------
-	 1 MARTIN0402 MARTIN0402 ordinario  02-OCT-26
-	 2 SYS	      SYS	 sysdba     02-OCT-26
-	 3 MARTIN0403 MARTIN0403 ordinario  02-OCT-26
-	 4 PUBLIC     PUBLIC	 sysoper    02-OCT-26
-	 5 MARTIN0404 MARTIN0404 ordinario  02-OCT-26
-	 6 SYSBACKUP  SYS	 sysbackup  02-OCT-26
+     1 MARTIN0402 MARTIN0402 ordinario  02-OCT-26
+     2 SYS          SYS     sysdba     02-OCT-26
+     3 MARTIN0403 MARTIN0403 ordinario  02-OCT-26
+     4 PUBLIC     PUBLIC     sysoper    02-OCT-26
+     5 MARTIN0404 MARTIN0404 ordinario  02-OCT-26
+     6 SYSBACKUP  SYS     sysbackup  02-OCT-26
 
 6 rows selected.
 
 martin04_admin@mqrbda_s1> 
-
 ```
 
 salir  de SQLplus

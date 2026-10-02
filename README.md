@@ -86,6 +86,17 @@ ejecutar
 
 Este script crea un usuario dueño de la tabla bitacora y tres usuarios mas que escribiran registros en estas usando firerentes privilegios de aministracion
 
+Tabla de usuarios y privilegios
+
+| #   | usuario        | esquema asignado | priv/usuario con que autentica | requiere permisos para insertar |
+| --- | -------------- | ---------------- | ------------------------------ | ------------------------------- |
+| 1   | **nombre**0402 | nombre0402       | ordinario                      | si                              |
+| 2   | sys            | sys              | sysdba                         | no                              |
+| 3   | **nombre**0403 | nombre0403       | ordinario                      | si                              |
+| 4   | public         | public           | sysoper                        | si                              |
+| 5   | **nombre**0404 | nombre0404       | ordinario                      | si                              |
+| 6   | sysbackup      | sys              | sysbackup                      | si                              |
+
 Editar
 
 ```sql
