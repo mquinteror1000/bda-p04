@@ -221,7 +221,19 @@ Otorgar permisos de ejecucion a todo .sh
 Editar sv-08-main.sql
 
 ```sql
+-- Nombre del alumno empleado como prefijo para crear usuarios en la BD
+--
+define p_nombre='martin'
 
+---
+---Nombre de la PDB
+---
+define p_pdb='mqrbda_s1'
+
+--:
+-- Password del usuario system. Empleado para crear objetos del validador.
+--
+define p_system_password='system1'
 ```
 
 Ejecutar el sv-08-main.sql
