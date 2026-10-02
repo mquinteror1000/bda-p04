@@ -71,7 +71,6 @@ DEFINE usuario1 = martin04_dev_01
 DEFINE usuario2 = martin04_dev_02
 DEFINE password1 = martin
 DEFINE password2 = martin
-
 ```
 
 ejecutar
@@ -151,8 +150,6 @@ Ahora si ejecutamos el script siendo **oracle**
 
 En este momento el password de sys pasa a ser **Hola1234***
 
-
-
 ## s-06-actualiza-archivo-passwords.sql
 
 Devuelve el password de sys a **system1** partiendo de un archivo de passwords recien recuperado con el password **Hola1234***
@@ -185,8 +182,6 @@ DEFINE password_admin = martin
 Despues de esto el password de sys es **system1** como al principio
 
 [salida: s-06-actualiza-archivo-passwords.sql](ejecucion/s-06-actualiza-archivo-passwords.sql.md)
-
-
 
 ## Antes del validador
 
@@ -223,7 +218,13 @@ Otorgar permisos de ejecucion a todo .sh
 [martin@h1-bda-mqr 04]$ chmod 755 *.sh
 ```
 
-Ejecutar el sv-08-min.sql
+Editar sv-08-main.sql
+
+```sql
+
+```
+
+Ejecutar el sv-08-main.sql
 
 ```shellsession
 [martin@h1-bda-mqr 04]$ sqlplus /nolog @sv-08-main.sql
