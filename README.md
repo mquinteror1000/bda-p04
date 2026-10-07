@@ -2,6 +2,8 @@
 
 ### Privilegios de administración, roles y mecanismos de autenticación
 
+Todas las actividades de esta practica se realizan en el contenedor
+
 ## Iniciar y levantar
 
 Iniciar la instancia con  y levantar con **launch**
