@@ -123,13 +123,17 @@ Ejecutar
 [oracle@h1-bda-agn container]$ sqlplus /nolog @s-07-system-privs-on-pdb.sql 
 ```
 
+# VALIDADOR
 
+## sv-08-main.sql
 
-
+Ejecutar el script auxiliar runval.sh
 
 ```shellsession
-[martin@h1-bda-mqr 04]$ chmod 755 *.sh
+[alicia@h1-bda-agn 04]$ sh runval.sh 
 ```
+
+O bien Directamente
 
 Ejecutar el sv-08-main.sql
 
