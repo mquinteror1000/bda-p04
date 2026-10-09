@@ -6,20 +6,12 @@
 --En scripts reales no deben incluirse passwords. Solo se hace para
 --propósitos de pruebas y evitar escribirlos cada vez que se quiera ejecutar
 --el proceso de validación de la práctica (propósitos académicos).
-
---
 -- Nombre del alumno empleado como prefijo para crear usuarios en la BD
---
-define p_nombre='martin'
 
----
+define p_nombre='alicia'
 ---Nombre de la PDB
----
-define p_pdb='mqrbda_s1'
-
---
+define p_pdb='agnbda_s1'
 -- Password del usuario system. Empleado para crear objetos del validador.
---
 define p_system_password='system1'
 
 --- ============= Las siguientes configuraciones ya no requieren cambiarse====
