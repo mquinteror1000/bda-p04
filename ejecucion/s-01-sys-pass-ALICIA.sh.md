@@ -1,18 +1,8 @@
-# s-01-sys-pass-admin.sh
-
-**modificar**
-
-```bash
-usuarioOs=$(whoami)
-#EDITAR
-INICIALES=mqr
-```
-
-**Ejecutar**
+## s-01-sys-pass-ALICIA.sh
 
 ```shellsession
-[martin@h1-bda-mqr 04]$ sh s-01-sys-pass-admin.sh 
-[sudo] password for martin: 
+[alicia@h1-bda-agn container]$ sh s-01-sys-pass-ALICIA.sh
+[sudo] password for alicia:
 
 User altered.
 
@@ -31,8 +21,6 @@ SYS
 
 CON_NAME
 ------------------------------
-MQRBDA_S1
-[sqlplus]: conexion de sys en mqrbda_s1 exitosa
-:w
- 
+AGNBDA_S1
+[sqlplus]: conexion de sys en agnbda_s1 exitosa
 ```
