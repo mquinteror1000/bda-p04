@@ -1,5 +1,7 @@
 # Practica 4 BDA
 
+### ALICIA
+
 ### Privilegios de administración, roles y mecanismos de autenticación
 
 Todas las actividades de esta practica se realizan en el contenedor
@@ -8,32 +10,21 @@ Todas las actividades de esta practica se realizan en el contenedor
 
 Iniciar la instancia con  y levantar con **launch**
 
-[Salida: Levantar la instancia](ejecucion/levanta-con-launch.md)
-
-## s-01-sys-pass-admin.sh
-
-Este script 
-
-1. Modifica el password de **sys** a system1_p4
-
-2. autentica sys por archivo de passwords en **pdb$root**
-
-3. autentica sy por archivo de passwords en **INICIALESbda_s1**
-
-modificar las iniciales
-
-```bash
-#EDITAR
-INICIALES=mqr
+```shellsession
+martin@pc-bdx-mqr:~$ agnDockerBda1
+c1-bda-agn
+bash-5.1# launch 
 ```
+
+# CONTAINER
+
+## s-01-sys-pass-ADMIN.s
 
 ejecutarlo con el usuario aministrador 
 
 ```shellsession
-[martin@h1-bda-mqr 04]$ sh s-01-sys-pass-admin.sh
+[alicia@h1-bda-agn container]$ sh s-01-sys-pass-ADMIN.sh 
 ```
-
-[Salida: ejecutar s-01-sys-pass-admin.md](ejecucion/s-01-sys-pass-admin.md)
 
 ## s-02-diagnostico-bd.sql
 
@@ -43,21 +34,13 @@ Crea una tabla **NOMBRE_0401.t01_diagnostico** con la información
 | ----------- | ------------------------- | ------------------------- | ------------- | ------------ | --------- |
 | De la vista | product_component_version | product_component_version | v$instance    | v$nstance    | v$version |
 
-Editar
-
-```bash
-DEFINE pdb = 'mqrbda_s1'
-DEFINE sys_password = 'system1_p4'
-DEFINE usuario = 'MARTIN_0401'
-```
-
 Ejecutar
 
 ```shellsession
 [martin@h1-bda-mqr 04]$ sqlplus /nolog @s-02-diagnostico-bd.sql 
 ```
 
-[Ejecucion s-02-diagnostico-bd.sql ](ejecucion/s-02-diagnostico-bd.sql.md)
+[Salida](ejecucion/s-02-diagnostico-bd.sql.md)
 
 ## s-03-roles.sql
 
@@ -81,8 +64,6 @@ ejecutar
 [martin@h1-bda-mqr 04]$ sqlplus /nolog @s-03-roles.sql
 ```
 
-[salida: s-03-roles.sql](ejecucion/s-03-roles.sql.md)
-
 ## s-04-privs-admin.sql
 
 Este script crea un usuario dueño de la tabla bitacora y tres usuarios mas que escribiran registros en estas usando firerentes privilegios de aministracion
@@ -97,22 +78,6 @@ Tabla de usuarios y privilegios
 | 4   | public         | public           | sysoper                        | si                              |
 | 5   | **nombre**0404 | nombre0404       | ordinario                      | si                              |
 | 6   | sysbackup      | sys              | sysbackup                      | si                              |
-
-Editar
-
-```sql
--- EDITAR 
-DEFINE pdb = mqrbda_s1
-DEFINE sys_password = system1_p4
-DEFINE usuario1 = martin0402
-DEFINE usuario2 = martin0403
-DEFINE usuario3 = martin0404
-DEFINE usuario_admin = martin04_admin
-DEFINE password1 = martin
-DEFINE password2 = martin
-DEFINE password3 = martin
-DEFINE password_admin = martin
-```
 
 ejecutar
 
@@ -159,21 +124,6 @@ Devuelve el password de sys a **system1** partiendo de un archivo de passwords r
 Tambien restarua los **privilegios de tres usuarios** que al borrar y recuperar el arvhivo ya no están, por lo tanto han perdido sus privilegios
 
 **Editar**
-
-```sql
--- EDITAR 
-DEFINE pdb = mqrbda_s1
-DEFINE sys_password = Hola1234*
-DEFINE new_sys_password = system1
-DEFINE usuario1 = martin0402
-DEFINE usuario2 = martin0403
-DEFINE usuario3 = martin0404
-DEFINE usuario_admin = martin04_admin
-DEFINE password1 = martin
-DEFINE password2 = martin
-DEFINE password3 = martin
-DEFINE password_admin = martin
-```
 
 **Ejecutar** con el usuario **oracle**
 

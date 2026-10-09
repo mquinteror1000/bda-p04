@@ -2,17 +2,17 @@
 -- lo devuelve al valor system1 y restara los priviledios de los 3 usuarios creados con el script s-04-privs-admin.sql
 --SET VERIFY OFF si no se quieren ver las actualizaciones de cadenas
 -- EDITAR 
-DEFINE pdb = mqrbda_s1
+DEFINE pdb = agnbda_s1
 DEFINE sys_password = Hola1234*
 DEFINE new_sys_password = system1
-DEFINE usuario1 = martin0402
-DEFINE usuario2 = martin0403
-DEFINE usuario3 = martin0404
-DEFINE usuario_admin = martin04_admin
-DEFINE password1 = martin
-DEFINE password2 = martin
-DEFINE password3 = martin
-DEFINE password_admin = martin
+DEFINE usuario1 = alicia0402
+DEFINE usuario2 = alicia0403
+DEFINE usuario3 = alicia0404
+DEFINE usuario_admin = alicia04_admin
+DEFINE password1 = alicia
+DEFINE password2 = alicia
+DEFINE password3 = alicia
+DEFINE password_admin = alicia
 
 WHENEVER SQLERROR EXIT SQL.SQLCODE
 

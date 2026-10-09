@@ -1,11 +1,11 @@
 -- Usa el concepto de rol para asignar privilegios a varios usuarios
 -- EDITAR 
-DEFINE pdb = mqrbda_s1
+DEFINE pdb = agnbda_s1
 DEFINE sys_password = system1_p4
-DEFINE usuario1 = martin04_dev_01
-DEFINE usuario2 = martin04_dev_02
-DEFINE password1 = martin
-DEFINE password2 = martin
+DEFINE usuario1 = alicia04_dev_01
+DEFINE usuario2 = alicia04_dev_02
+DEFINE password1 = alicia
+DEFINE password2 = alicia
 
 WHENEVER SQLERROR EXIT SQL.SQLCODE
 CONNECT sys/&sys_password@&pdb AS SYSDBA

@@ -3,7 +3,7 @@
 # Verifica que el cambio fue aplicado autenticando por archivo de passwords
 OS_USER=$(whoami)
 #EDITAR
-INICIALES=mqr
+INICIALES=agn
 
 if [ "${OS_USER}" = "oracle" ] || [ "${OS_USER}" = "root" ]; then
 	echo "[container] Ejecutar como usaurio administrador, no orace o root" 

@@ -1,7 +1,6 @@
 -- otorga a system los privilegios necesarios para que el validador del profe
 -- pueda compilar sus cosas
--- EDITAR
-DEFINE pdb = mqrbda_s1
+DEFINE pdb = agnbda_s1
 DEFINE sys_password = system1
 DEFINE system_password = system1
 

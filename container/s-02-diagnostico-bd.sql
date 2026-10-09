@@ -1,9 +1,8 @@
 -- obtiene informacion de la CDB consultando vistas del diccionario y la guarda en la tabla diagnostico
--- EDITAR
-DEFINE pdb = 'mqrbda_s1'
+DEFINE pdb = 'agnbda_s1'
 DEFINE sys_password = 'system1_p4'
-DEFINE usuario = martin0401
-DEFINE password = martin
+DEFINE usuario = alicia0401
+DEFINE password = alicia
 
 WHENEVER SQLERROR EXIT SQL.SQLCODE
 CONNECT sys/"&sys_password."@&pdb. AS SYSDBA

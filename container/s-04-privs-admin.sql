@@ -2,16 +2,16 @@
 -- @Fecha 26/09/2026
 -- obtiene informacion de la CDB consultando vistas del diccionario y la guarda en una tabla
 -- EDITAR 
-DEFINE pdb = mqrbda_s1
+DEFINE pdb = agnbda_s1
 DEFINE sys_password = system1_p4
-DEFINE usuario1 = martin0402
-DEFINE usuario2 = martin0403
-DEFINE usuario3 = martin0404
-DEFINE usuario_admin = martin04_admin
-DEFINE password1 = martin
-DEFINE password2 = martin
-DEFINE password3 = martin
-DEFINE password_admin = martin
+DEFINE usuario1 = alicia0402
+DEFINE usuario2 = alicia0403
+DEFINE usuario3 = alicia0404
+DEFINE usuario_admin = alicia04_admin
+DEFINE password1 = alicia
+DEFINE password2 = alicia
+DEFINE password3 = alicia
+DEFINE password_admin = alicia
 
 WHENEVER SQLERROR EXIT SQL.SQLCODE
 
