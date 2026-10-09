@@ -1,11 +1,9 @@
 ## s-06-actualiza-archivo-passwords.sql
 
-SAlida
-
 ```shellsession
-[oracle@h1-bda-mqr 04]$ sqlplus /nolog @s-06-actualiza-archivo-passwords.sql
+[oracle@h1-bda-agn container]$ sqlplus /nolog @s-06-actualiza-archivo-passwords.sql 
 
-SQL*Plus: Release 23.0.0.0.0 - Production on Fri Oct 2 13:04:04 2026
+SQL*Plus: Release 23.0.0.0.0 - Production on Fri Oct 9 15:29:16 2026
 Version 23.8.0.25.04
 
 Copyright (c) 1982, 2025, Oracle.  All rights reserved.
@@ -18,17 +16,17 @@ User altered.
 
 Connected.
 old   1: GRANT SYSDBA TO &usuario1.
-new   1: GRANT SYSDBA TO martin0402
+new   1: GRANT SYSDBA TO alicia0402
 
 Grant succeeded.
 
 old   1: GRANT SYSOPER TO &usuario2.
-new   1: GRANT SYSOPER TO martin0403
+new   1: GRANT SYSOPER TO alicia0403
 
 Grant succeeded.
 
 old   1: GRANT SYSBACKUP TO &usuario3.
-new   1: GRANT SYSBACKUP TO martin0404
+new   1: GRANT SYSBACKUP TO alicia0404
 
 Grant succeeded.
 
@@ -36,13 +34,11 @@ Grant succeeded.
 USERNAME	     SYSDB SYSOP SYSBA SYSKM SYSDG     CON_ID
 -------------------- ----- ----- ----- ----- ----- ----------
 SYS		     TRUE  TRUE  FALSE FALSE FALSE	    0
-MARTIN0403	     FALSE TRUE  FALSE FALSE FALSE	    3
-MARTIN0402	     TRUE  FALSE FALSE FALSE FALSE	    3
-MARTIN0404	     FALSE FALSE TRUE  FALSE FALSE	    3
+ALICIA0402	     TRUE  FALSE FALSE FALSE FALSE	    3
+ALICIA0403	     FALSE TRUE  FALSE FALSE FALSE	    3
+ALICIA0404	     FALSE FALSE TRUE  FALSE FALSE	    3
 
 Disconnected from Oracle Database 23ai Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
 Version 23.8.0.25.04
 
 ```
-
-

@@ -1,4 +1,4 @@
-## s-01-sys-pass-ALICIA.sh
+## s-01-sys-pass-ADMIN.sh
 
 ```shellsession
 [alicia@h1-bda-agn container]$ sh s-01-sys-pass-ALICIA.sh

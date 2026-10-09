@@ -1,11 +1,8 @@
 ## s-07-system-privs-on-pdb.sql
-
-Salida
-
 ```shellsession
-[martin@h1-bda-mqr 04]$ sqlplus /nolog @s-07-system-privs-on-pdb.sql 
+[oracle@h1-bda-agn container]$ sqlplus /nolog @s-07-system-privs-on-pdb.sql 
 
-SQL*Plus: Release 23.0.0.0.0 - Production on Fri Oct 2 13:32:16 2026
+SQL*Plus: Release 23.0.0.0.0 - Production on Fri Oct 9 15:32:30 2026
 Version 23.8.0.25.04
 
 Copyright (c) 1982, 2025, Oracle.  All rights reserved.
@@ -36,5 +33,3 @@ Disconnected from Oracle Database 23ai Free Release 23.0.0.0.0 - Develop, Learn,
 Version 23.8.0.25.04
 
 ```
-
-

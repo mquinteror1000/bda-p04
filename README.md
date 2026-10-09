@@ -40,28 +40,14 @@ Ejecutar
 [martin@h1-bda-mqr 04]$ sqlplus /nolog @s-02-diagnostico-bd.sql 
 ```
 
-[Salida](ejecucion/s-02-diagnostico-bd.sql.md)
-
 ## s-03-roles.sql
 
 Crea un rol **p04_dev_role** le otorga privilegios, los modifica y asigna el rol a sol usuarios **MARTIN_DEV_01** y **MARTIN_DEV_02** y comprueba el resultado con una consulta
 
-editar
-
-```sql
--- EDITAR 
-DEFINE pdb = mqrbda_s1
-DEFINE sys_password = system1_p4
-DEFINE usuario1 = martin04_dev_01
-DEFINE usuario2 = martin04_dev_02
-DEFINE password1 = martin
-DEFINE password2 = martin
-```
-
 ejecutar
 
 ```shellsession
-[martin@h1-bda-mqr 04]$ sqlplus /nolog @s-03-roles.sql
+[alicia@h1-bda-agn container]$ sqlplus /nolog @s-03-roles.sql 
 ```
 
 ## s-04-privs-admin.sql
@@ -82,12 +68,10 @@ Tabla de usuarios y privilegios
 ejecutar
 
 ```shellsession
-[martin@h1-bda-mqr 04]$ sql /nolog @s-04-privs-admin.sql
+[alicia@h1-bda-agn container]$ sqlplus /nolog s-04-privs-admin.sql 
 ```
 
-[salida: s-04-privs-admin.sql](ejecucion/s-04-privs-admin.sql.md)
-
-## s-05-archivo-passwords-oracle.sh
+## s-05-archivo-passwords-ORACLE.sh
 
 Este scrip simula la perdida del archvo de passwords y la posterior recuperacion del mismo con el password **Hola1234***
 
@@ -97,10 +81,6 @@ Como oracle no tiene permisos para escribir en esta carpeta, antes de ejecutar e
 martin@pc-bda-mqr:/unam/bda/practicas/04$ chmod o+w .
 martin@pc-bda-mqr:/unam/bda/practicas/04$ 
 ```
-
-**Editar**
-
-No hace fata editar
 
 **Ejecutar**
 
@@ -113,10 +93,6 @@ Ahora si ejecutamos el script siendo **oracle**
 [container] se ha generado correctamente el nuevo archivo de passwords: Vuelve a proporcionar privilegios a los demas usuarios desde sqlplus
 ```
 
-[Salida: s-05-archivo-passwords-oracle.sh](ejecucion/s-05-archivo-passwords-oracle.sh.md)
-
-En este momento el password de sys pasa a ser **Hola1234***
-
 ## s-06-actualiza-archivo-passwords.sql
 
 Devuelve el password de sys a **system1** partiendo de un archivo de passwords recien recuperado con el password **Hola1234***
@@ -128,64 +104,31 @@ Tambien restarua los **privilegios de tres usuarios** que al borrar y recuperar 
 **Ejecutar** con el usuario **oracle**
 
 ```shellsession
-[oracle@h1-bda-mqr 04]$ sqlplus /nolog @s-06-actualiza-archivo-passwords.sql
+[oracle@h1-bda-agn container]$ sqlplus /nolog @s-06-actualiza-archivo-passwords.sql 
 ```
 
 Despues de esto el password de sys es **system1** como al principio
 
-[salida: s-06-actualiza-archivo-passwords.sql](ejecucion/s-06-actualiza-archivo-passwords.sql.md)
+## s-07-system-privs-on-pdb.sql
 
-## Antes del validador
-
-Tuve una mala experiencia al ejecutar el validador, todo parecia perdido y no entendía que fallaba.
+Antes de ejecutar el validador otorgar los permisos necesarios a sys 
 
 - El validador usa el usuario **system** "chalan de sys" para ejecutar los script
 
 - El validador necesita que **system** compile los scripts del validador que usara en su proceso, para lo cual necesita privilegios para usar modulos de oracle
 
-**Editar**
-
-```sql
--- EDITAR
-DEFINE pdb = mqrbda_s1
-DEFINE sys_password = system1
-DEFINE system_password = system1
-```
-
-**Ejecutar**
+Ejecutar
 
 ```shellsession
-[martin@h1-bda-mqr 04]$ sqlplus /nolog @s-07-system-privs-on-pdb.sql
+[oracle@h1-bda-agn container]$ sqlplus /nolog @s-07-system-privs-on-pdb.sql 
 ```
 
-[Salida: ](ejecucion/s-07-system-privs-on-pdb.sql.md)
 
-## Validador
 
-Que miedo
 
-Otorgar permisos de ejecucion a todo .sh
 
 ```shellsession
 [martin@h1-bda-mqr 04]$ chmod 755 *.sh
-```
-
-Editar sv-08-main.sql
-
-```sql
--- Nombre del alumno empleado como prefijo para crear usuarios en la BD
---
-define p_nombre='martin'
-
----
----Nombre de la PDB
----
-define p_pdb='mqrbda_s1'
-
---:
--- Password del usuario system. Empleado para crear objetos del validador.
---
-define p_system_password='system1'
 ```
 
 Ejecutar el sv-08-main.sql
